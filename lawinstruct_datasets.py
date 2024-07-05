@@ -74,11 +74,14 @@ from instruction_datasets.us_class_actions import USClassActions
 from instruction_datasets.valid_wills import ValidWills
 from instruction_datasets.xp3mt import XP3MT
 from instruction_datasets.german_laymen_qa import GermanLaymenQA
+from instruction_datasets.agb_de import AGBDE
 from instruction_datasets.legal_lens import LegalLens
 from instruction_datasets.keyphrase_generation_eu import KeyphraseGenerationEU
 from instruction_datasets.longform_legal_qa import LLeQA
+from instruction_datasets.swiss_citation_extraction import SwissCitationExtraction
 
 LEGAL_DATASETS = frozenset({
+    AGBDE,
     BrazilianBarExam,
     BrCAD5,
     BVADecisions,
@@ -130,6 +133,7 @@ LEGAL_DATASETS = frozenset({
     ShortAnswerFeedback,
     SpanishLaborLaw,
     StackExchangeQuestionsLegal,
+    SwissCitationExtraction,
     SwissCourtViewGeneration,
     SwissCriticalityPrediction,
     SwissJudgmentPrediction,
@@ -148,6 +152,7 @@ XP3MT = frozenset({XP3MT})
 NON_LEGAL_DATASETS = frozenset({NaturalInstructionsOther, GSM8K, ReClor, Lila, LogiQA}) | XP3MT
 ERRONEOUS_DATASETS = frozenset([ProfessionalLaw])
 DATASETS_ALREADY_BUILT = NATURAL_INSTRUCTIONS | XP3MT | frozenset({
+    AGBDE,
     BrazilianBarExam,
     BrCAD5,
     BVADecisions,
@@ -202,6 +207,7 @@ DATASETS_ALREADY_BUILT = NATURAL_INSTRUCTIONS | XP3MT | frozenset({
     ShortAnswerFeedback,
     SpanishLaborLaw,
     StackExchangeQuestionsLegal,
+    SwissCitationExtraction,
     SwissCourtViewGeneration,
     SwissCriticalityPrediction,
     SwissJudgmentPrediction,
